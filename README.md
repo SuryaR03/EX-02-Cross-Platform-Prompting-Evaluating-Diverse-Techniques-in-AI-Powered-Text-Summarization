@@ -68,15 +68,36 @@ Final score = average of all metrics.
 
 (ChatGPT and Gemini handle prompts more effectively; Copilot trails behind)
 
-🔹 Observations
+Input:
+"The Basics of Blockchain Technology" – 500-word article (technical, detailed).
 
-Role-based prompting consistently gave the most clear, student-friendly summaries.
+Zero-shot Example (ChatGPT)
 
-Chain-of-Thought produced well-structured outputs but sometimes exceeded word limits.
+“Blockchain is a decentralized system of recording transactions. It works without a central authority by using cryptography. It is widely applied in cryptocurrencies, finance, and supply chain management.”
 
-Few-shot worked well if good examples were provided.
+✅ Accurate but too short, lacks depth.
 
-Zero-shot was fastest but often too generic.
+Few-shot Example (Gemini)
+
+“Blockchain is a distributed ledger that records transactions across multiple computers. This ensures transparency, immutability, and security. Each transaction is verified by consensus and added in a ‘block’. Applications include cryptocurrency, healthcare data security, and voting systems.”
+
+✅ Better detail, structured.
+
+⚠️ Still slightly technical for undergrads.
+
+Chain-of-Thought Example (Claude)
+
+“Step 1: Identify core ideas – decentralization, distributed ledger, consensus.
+Step 2: Explain in simple terms.
+Final Summary: Blockchain is like a shared online notebook where everyone can see and agree on the entries. Once information is added, it cannot be erased. This makes it secure and trustworthy. It is used in digital money (Bitcoin), supply chains, and secure voting systems.”
+
+✅ Very clear, structured reasoning.
+
+Role-based Example (ChatGPT)
+
+“As an educational content curator, here’s a summary for students: Blockchain is a digital system that records information in a way that is nearly impossible to change. It stores data in units called blocks, which link together to form a chain. This ensures security and transparency without needing a central authority. The technology is mainly used in cryptocurrencies but also in areas like supply chain tracking and healthcare. For undergraduates, the key takeaway is that blockchain makes digital records more secure, transparent, and reliable.”
+
+✅ Best balance of clarity + accuracy + student-friendly tone.
 
 Across platforms:
 
