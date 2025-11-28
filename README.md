@@ -1,116 +1,117 @@
 # EX-02-Cross-Platform-Prompting-Evaluating-Diverse-Techniques-in-AI-Powered-Text-Summarization
 
 ## AIM
-To evaluate and compare the effectiveness of prompting techniques (zero-shot, few-shot, chain-of-thought, role-based) across different AI platforms (e.g., ChatGPT, Gemini, Claude, Copilot) in a specific task: text summarization.
+To examine and compare how different prompting strategies—such as zero-shot, few-shot, chain-of-thought, and role-based prompting—perform across various AI platforms (ChatGPT, Gemini/Bard, Claude, Copilot, Cohere, and Meta) for a specific task: text summarization.
 
-## Scenario:
-You are part of a content curation team for an educational platform that delivers quick summaries of research papers to undergraduate students. Your task is to summarize a 500-word technical article on "The Basics of Blockchain Technology" using multiple AI platforms and prompting strategies.
+## Algorithm
+## 1.Define the Use Case:
+Select a common task (e.g., summarizing text, answering a technical question, creating a story, or generating code) that can be executed consistently across all selected AI platforms.
 
-Your goal is to determine which combination of prompting technique + platform provides the best summary in terms of:
+## 2.Prepare a Uniform Prompt Set:
+Design a set of well-structured prompts based on the chosen task.
+Ensure the prompts are unambiguous so that all AI tools receive identical input for fair comparison.
+Include multiple prompt styles to evaluate different capabilities.
+
+## 3.Execute Prompts Across Platforms:
+Run each prompt individually on every AI model (ChatGPT, Claude, Gemini/Bard, Cohere Command, Meta).
+Maintain similar testing conditions such as input format, sequence, and environment.
+Record response time, output quality, and any technical difficulties.
+
+## 4.Evaluate the Responses:
+Assess responses using the following criteria:
 
 Accuracy
 
-Coherence
+Clarity
 
-Simplicity
+Depth of explanation
 
-Speed
+Relevance to the given prompt
 
-User experience
+## 5.Compare Performance:
+Analyze the outputs to identify strengths and weaknesses of each platform.
+Highlight platform-specific advantages like response speed, creativity, formatting capability, or contextual understanding.
 
-## Algorithm
-Input Selection
+## 6.Deliverables:
 
-A 500-word technical article on Blockchain Basics was chosen.
+A comparison table summarizing each model’s performance.
 
-Prompting Strategy Design
+A short report outlining conclusions and recommending the best-suited platform depending on the task.
+## Algorithm Execution: Test Scenario and Prompt Outputs (Across Platforms)
+## 1. Straightforward Prompt
 
-Zero-shot: Directly ask for a summary.
+Prompt: “What is the capital of France?”
+(All platforms returned: Paris)
 
-Few-shot: Provide 2–3 examples of summaries, then ask for the Blockchain one.
+## 2. Tabular Prompt
 
-Chain-of-Thought: Instruct the AI to reason step by step before producing the summary.
+Prompt: “Create a table comparing the features of AI models.”
 
-Role-based: Assign a role like “Educational content curator” to shape the response style.
+AI Platform	Response Summary
+ChatGPT	Detailed table with features like NLU, context handling, speed, and availability.
+Claude	Highlights NLU, speed, and data usage.
+Bard	Focuses on contextual understanding, speed, availability.
+Cohere Command	Lists speed, contextual abilities, availability.
+## 3. Missing Word Prompt
 
-Platform Execution
+Prompt: “The capital of Italy is ___.”
+(All platforms answered: Rome)
 
-Run each prompting strategy across ChatGPT, Gemini, Claude, Copilot.
+## 4. Preceding Question Prompt
 
-Evaluation Metrics
+Prompt: “Given that the capital of France is Paris, what is the capital of Italy?”
+(All platforms answered: Rome)
 
-Accuracy: Does the summary capture blockchain fundamentals correctly?
+## 5. Comparative Prompt
 
-Coherence: Logical structure and flow.
+Prompt: “Compare the features of Python and Java.”
 
-Simplicity: Is it easy for undergraduate students to understand?
+ChatGPT: Deep, structured comparison.
 
-Speed: Response time and efficiency.
+Claude: Balanced pros and cons.
 
-User Experience: Readability, tone, and accessibility.
+Bard: Clear, example-based comparison.
 
-Scoring
+Cohere Command: Short, to the point.
 
-Each output scored on a scale of 1–10 across the five metrics.
+Meta: Simple feature comparison.
 
-Final score = average of all metrics.
+## 6. Experiential Prompt
 
-## Bar Graph
-🔹 Comparative Graph 1 – Prompting Techniques Effectiveness
+Prompt: “What is the best way to improve focus while studying?”
 
-<img width="1400" height="1000" alt="bargraph1" src="https://github.com/user-attachments/assets/7ee8de94-b072-48c4-9867-c5868d5d5e9e" />
+ChatGPT: Practical, step-by-step approach.
 
-(Role-based and Chain-of-Thought prompting outperform others)
+Claude: Insightful and thoughtful.
 
-🔹 Comparative Graph 2 – Cross-Platform + Prompting Techniques
+Bard: Goal-based, realistic advice.
 
-<img width="2000" height="1200" alt="bargraph2" src="https://github.com/user-attachments/assets/36594a53-5dd0-4f28-83bb-2fba51b606b2" />
+Cohere: Factual, straightforward.
 
-(ChatGPT and Gemini handle prompts more effectively; Copilot trails behind)
+Meta: General and simple tips.
 
-Input:
-"The Basics of Blockchain Technology" – 500-word article (technical, detailed).
+## 7. Everyday Prompt
 
-Zero-shot Example (ChatGPT)
+Prompt: “How do I prepare for a job interview?”
+(All platforms gave similar steps: research, practice common questions, dress properly, be punctual.)
 
-“Blockchain is a decentralized system of recording transactions. It works without a central authority by using cryptography. It is widely applied in cryptocurrencies, finance, and supply chain management.”
+## 8. Universal Prompt
 
-✅ Accurate but too short, lacks depth.
+Prompt: “Explain machine learning in simple terms.”
+(All platforms explained ML as pattern-learning from data.)
 
-Few-shot Example (Gemini)
-
-“Blockchain is a distributed ledger that records transactions across multiple computers. This ensures transparency, immutability, and security. Each transaction is verified by consensus and added in a ‘block’. Applications include cryptocurrency, healthcare data security, and voting systems.”
-
-✅ Better detail, structured.
-
-⚠️ Still slightly technical for undergrads.
-
-Chain-of-Thought Example (Claude)
-
-“Step 1: Identify core ideas – decentralization, distributed ledger, consensus.
-Step 2: Explain in simple terms.
-Final Summary: Blockchain is like a shared online notebook where everyone can see and agree on the entries. Once information is added, it cannot be erased. This makes it secure and trustworthy. It is used in digital money (Bitcoin), supply chains, and secure voting systems.”
-
-✅ Very clear, structured reasoning.
-
-Role-based Example (ChatGPT)
-
-“As an educational content curator, here’s a summary for students: Blockchain is a digital system that records information in a way that is nearly impossible to change. It stores data in units called blocks, which link together to form a chain. This ensures security and transparency without needing a central authority. The technology is mainly used in cryptocurrencies but also in areas like supply chain tracking and healthcare. For undergraduates, the key takeaway is that blockchain makes digital records more secure, transparent, and reliable.”
-
-✅ Best balance of clarity + accuracy + student-friendly tone.
-
-Across platforms:
-
-ChatGPT scored highest overall.
-
-Gemini performed well in simplicity and coherence.
-
-Claude balanced accuracy and clarity.
-
-Copilot lagged, struggling with coherence and depth.
+## Summary of Responses:
+| Prompt Type            | ChatGPT                 | Claude         | Bard           | Cohere             | Meta                   |
+| ---------------------- | ----------------------- | -------------- | -------------- | ------------------ | ---------------------- |
+| Straightforward        | Very accurate & quick   | Concise        | Detailed       | Brief              | Clear                  |
+| Tabular                | Excellent formatting    | Decent         | Good           | Limited formatting | Simple                 |
+| Missing Word           | Very context-aware      | Accurate       | Good           | Basic              | Accurate               |
+| Preceding Question     | Great contextual memory | Moderate       | Good           | Good               | Sometimes inconsistent |
+| Comparative            | Highly detailed         | Balanced       | Clear          | Short              | Simple                 |
+| Experiential           | Practical & empathetic  | Thoughtful     | Realistic      | Factual            | General                |
+| Everyday               | Step-by-step            | Personal touch | Clear examples | Functional         | Straightforward        |
+| Universal Explanations | Adaptive & strong       | Versatile      | Good clarity   | Concise            | Moderate depth         |
 
 ## Result
-The best combination for educational text summarization was:
-👉 Role-based Prompting + ChatGPT
-This pairing provided accurate, concise, and student-friendly summaries with excellent user experience.
+Thus the Prompting tools are executed and analysed sucessfully .
 
